@@ -1,29 +1,26 @@
 use yew::prelude::*;
-pub mod center;
-pub mod sidebar;
 
-use crate::center::Center;
-use crate::sidebar::Sidebar;
+mod style;
+
+use crate::style::Style;
 
 #[function_component(App)]
 fn app() -> Html {
     html! {
 
-
-        <div style={format!("display: flex")}>
-        <style>
-        {"
-        body {
-            margin: 0;
-        }
-"}
-        </style>
-        <Sidebar />
-       <Center />
-        <div style={format!("width: 500px; height: 100vh;")}>
-        <h2>{"Current Order"}</h2>
-        </div>
-        </div>
+        <html>
+        <head>
+        <Style />
+        </head>
+        <body>
+        <main>
+        <form>
+        <input />
+        <button>{"SUBMIT"}</button>
+        </form>
+        </main>
+        </body>
+        </html>
 
     }
 }
