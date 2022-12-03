@@ -459,6 +459,10 @@ function getImports() {
     imports.wbg.__wbg_setAttribute_d8436c14a59ab1af = function() { return handleError(function (arg0, arg1, arg2, arg3, arg4) {
         getObject(arg0).setAttribute(getStringFromWasm0(arg1, arg2), getStringFromWasm0(arg3, arg4));
     }, arguments) };
+    imports.wbg.__wbg_target_bf704b7db7ad1387 = function(arg0) {
+        const ret = getObject(arg0).target;
+        return isLikeNone(ret) ? 0 : addHeapObject(ret);
+    };
     imports.wbg.__wbg_bubbles_03eed164b4feeaf1 = function(arg0) {
         const ret = getObject(arg0).bubbles;
         return ret;
@@ -581,12 +585,12 @@ function getImports() {
     imports.wbg.__wbindgen_throw = function(arg0, arg1) {
         throw new Error(getStringFromWasm0(arg0, arg1));
     };
-    imports.wbg.__wbindgen_closure_wrapper3684 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 249, __wbg_adapter_16);
+    imports.wbg.__wbindgen_closure_wrapper3936 = function(arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 264, __wbg_adapter_16);
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper3735 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 269, __wbg_adapter_19);
+    imports.wbg.__wbindgen_closure_wrapper3988 = function(arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 284, __wbg_adapter_19);
         return addHeapObject(ret);
     };
 
@@ -624,7 +628,7 @@ function initSync(module) {
 
 async function init(input) {
     if (typeof input === 'undefined') {
-        input = new URL('yew-point-of-sale-cafe-60191ffcea2b0b27_bg.wasm', import.meta.url);
+        input = new URL('yew-point-of-sale-cafe-ed4325c083b49d2c_bg.wasm', import.meta.url);
     }
     const imports = getImports();
 

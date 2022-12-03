@@ -5,13 +5,20 @@ mod style;
 use crate::style::Style;
 
 struct Task {
-    title: String,
     body: String
 }
 
 #[function_component(App)]
 fn app() -> Html {
-    let task_list = use_state(|| None);
+    let task_list: UseStateHandle<Vec<Task>> = use_state(|| []);
+    let title_state = use_state(|| "");
+
+    let on_capture_title = {
+        let title_state = title_state.clone();
+            Callback::from(move |e: Event| {
+                title_state.set(e.target(AttrValue))
+            })
+    };
     html! {
 
         <html>
