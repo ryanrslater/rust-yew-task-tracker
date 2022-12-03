@@ -1,0 +1,10 @@
+body {
+    padding: 0
+}
+html {
+    box-sizing: border-box;
+}
+
+h2 {
+    color: red
+}
