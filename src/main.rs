@@ -4,8 +4,14 @@ mod style;
 
 use crate::style::Style;
 
+struct Task {
+    title: String,
+    body: String
+}
+
 #[function_component(App)]
 fn app() -> Html {
+    let task_list = use_state(|| None);
     html! {
 
         <html>
@@ -16,7 +22,9 @@ fn app() -> Html {
         <main>
         <form>
         <input />
-        <button>{"SUBMIT"}</button>
+        <div class="button-wrapper">
+        <button type="submit">{"SUBMIT"}</button>
+        </div>
         </form>
         </main>
         </body>

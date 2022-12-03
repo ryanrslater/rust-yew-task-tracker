@@ -624,7 +624,7 @@ function initSync(module) {
 
 async function init(input) {
     if (typeof input === 'undefined') {
-        input = new URL('yew-point-of-sale-cafe-47dc925543ed326e_bg.wasm', import.meta.url);
+        input = new URL('yew-point-of-sale-cafe-60191ffcea2b0b27_bg.wasm', import.meta.url);
     }
     const imports = getImports();
 
